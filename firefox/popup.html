@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dreaming Insights</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Dreaming Insights</h1>
+    <button id="clearBtn" title="Clear all captured data">Clear</button>
+  </header>
+
+  <main>
+    <section id="watchedVideo" class="card">
+      <div class="card-header">
+        <span class="endpoint-label">watchedVideo</span>
+        <div class="header-right">
+          <span class="timestamp" id="watchedVideoTime"></span>
+          <button class="copyBtn" data-key="watchedVideo">Copy</button>
+        </div>
+      </div>
+      <div class="card-body" id="watchedVideoBody">
+        <p class="empty">No data captured yet. Visit <strong>app.dreaming.com/spanish/progress</strong> and trigger a video event.</p>
+      </div>
+    </section>
+
+    <section id="dayWatchedTime" class="card">
+      <div class="card-header">
+        <span class="endpoint-label">dayWatchedTime</span>
+        <div class="header-right">
+          <span class="timestamp" id="dayWatchedTimeTime"></span>
+          <button class="copyBtn" data-key="dayWatchedTime">Copy</button>
+        </div>
+      </div>
+      <div class="card-body" id="dayWatchedTimeBody">
+        <p class="empty">No data captured yet.</p>
+      </div>
+    </section>
+
+    <section id="externalTime" class="card">
+      <div class="card-header">
+        <span class="endpoint-label">externalTime</span>
+        <div class="header-right">
+          <span class="timestamp" id="externalTimeTime"></span>
+          <button class="copyBtn" data-key="externalTime">Copy</button>
+        </div>
+      </div>
+      <div class="card-body" id="externalTimeBody">
+        <p class="empty">No data captured yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a id="privacyLink" href="#">Privacy Policy</a>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

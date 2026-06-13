@@ -1,0 +1,59 @@
+{
+  "manifest_version": 2,
+  "name": "Dreaming Insights Extension",
+  "version": "1.0",
+  "description": "Captures watchedVideo, externalTime and dayWatchedTime API responses on app.dreaming.com/spanish/progress",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dreaming-insights@dreaminginsights.com",
+      "strict_min_version": "109.0"
+    }
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "https://app.dreaming.com/*",
+    "https://dreaminginsights.com/*",
+    "https://www.dreaminginsights.com/*",
+    "http://localhost:5174/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.dreaming.com/spanish/progress*"],
+      "js": ["content-script.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://dreaminginsights.com/*",
+        "https://www.dreaminginsights.com/*",
+        "http://localhost:5174/*"
+      ],
+      "js": ["detect-script.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://dreaminginsights.com/*",
+        "https://www.dreaminginsights.com/*",
+        "http://localhost:5174/*"
+      ],
+      "js": ["paste-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Dreaming Insights"
+  },
+  "web_accessible_resources": ["injected.js", "privacy.html"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

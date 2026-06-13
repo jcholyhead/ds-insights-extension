@@ -98,7 +98,7 @@ dreaminginsights.com
 1. Clone or download this repository
 2. Open Chrome and navigate to `chrome://extensions`
 3. Enable **Developer mode** (toggle, top right)
-4. Click **Load unpacked** and select this directory
+4. Click **Load unpacked** and select the `chrome/` directory
 5. The extension icon will appear in the toolbar
 
 ---

@@ -1,7 +1,17 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(chmod +x /Users/james/development/ds-extension/pack.sh)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL available'\\)\")",
+      "Bash(mkdir -p chrome)",
+      "Bash(git mv *)",
+      "Bash(mkdir -p /Users/james/development/ds-extension/firefox/icons && cp /Users/james/development/ds-extension/chrome/icons/*.png /Users/james/development/ds-extension/firefox/icons/)",
+      "Bash(bash pack.sh firefox)",
+      "Bash(unzip -l dreaming-insights-firefox-v1.0.zip)"
+    ],
+    "additionalDirectories": [
+      "/Users/james/development/ds-extension/chrome/icons"
     ]
   }
 }

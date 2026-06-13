@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Dreaming Insights Extension</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f9f9f9;
+      padding: 40px 24px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      padding: 40px 48px;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin: 28px 0 8px;
+    }
+
+    p { margin-bottom: 12px; color: #333; }
+
+    ul {
+      margin: 8px 0 12px 20px;
+      color: #333;
+    }
+
+    ul li { margin-bottom: 6px; }
+
+    .highlight {
+      background: #f0fdf4;
+      border-left: 3px solid #22c55e;
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin: 20px 0;
+      font-weight: 500;
+      color: #166534;
+    }
+
+    .updated {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Dreaming Insights Extension &mdash; Firefox Add-ons</p>
+
+    <div class="highlight">
+      This extension does not transmit any data off your device. All data captured and stored by this extension remains entirely local to your browser.
+    </div>
+
+    <h2>What this extension does</h2>
+    <p>
+      The Dreaming Insights Extension intercepts specific API responses made by
+      <strong>app.dreaming.com</strong> while you browse your progress page, and makes
+      that data available to you within the extension popup and on the
+      <strong>dreaminginsights.com</strong> website.
+    </p>
+
+    <h2>What data is accessed</h2>
+    <p>The extension reads the JSON responses from three API endpoints on app.dreaming.com:</p>
+    <ul>
+      <li><strong>watchedVideo</strong> — information about videos you have watched</li>
+      <li><strong>externalTime</strong> — information about externally tracked learning time</li>
+      <li><strong>dayWatchedTime</strong> — a historical record of daily watch time</li>
+    </ul>
+    <p>
+      This data is data you have already generated through your own activity on app.dreaming.com.
+      The extension reads responses that your browser has already received from that site's servers.
+    </p>
+
+    <h2>How data is stored</h2>
+    <p>
+      Captured responses are stored using <strong>browser.storage.local</strong> — Firefox's
+      built-in local storage mechanism for extensions. This storage is:
+    </p>
+    <ul>
+      <li>Stored only on your device</li>
+      <li>Never synced to any server or cloud service</li>
+      <li>Accessible only by this extension</li>
+      <li>Clearable at any time using the Clear button in the extension popup</li>
+    </ul>
+
+    <h2>Data transmission</h2>
+    <p>
+      This extension does <strong>not</strong> send any data to any external server,
+      analytics service, or third party of any kind. There are no network requests
+      initiated by this extension beyond those already made by the websites you visit.
+    </p>
+
+    <h2>Permissions used and why</h2>
+    <ul>
+      <li>
+        <strong>storage</strong> — to persist the most recent API responses in
+        browser.storage.local so they are available when you open the popup or visit
+        dreaminginsights.com.
+      </li>
+      <li>
+        <strong>Host permission for app.dreaming.com</strong> — to inject the content
+        script that intercepts API responses on your progress page.
+      </li>
+      <li>
+        <strong>Host permission for dreaminginsights.com</strong> — to inject the
+        script that detects the extension is installed and auto-fills data fields
+        on that site.
+      </li>
+    </ul>
+
+    <h2>Websites the extension runs on</h2>
+    <ul>
+      <li><strong>app.dreaming.com/spanish/progress</strong> — to capture API responses</li>
+      <li><strong>dreaminginsights.com</strong> and <strong>www.dreaminginsights.com</strong> — to signal that the extension is installed and to fill data fields</li>
+    </ul>
+    <p>The extension does not run on any other websites.</p>
+
+    <h2>Data retention</h2>
+    <p>
+      Data is retained in local storage until you clear it via the extension popup,
+      uninstall the extension, or clear your browser's extension storage. No data
+      is retained anywhere else.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have questions about this privacy policy or how the extension works,
+      please contact us via <strong>dreaminginsights.com</strong>.
+    </p>
+
+    <p class="updated">Last updated: June 2026</p>
+  </div>
+</body>
+</html>

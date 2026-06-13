@@ -63,7 +63,7 @@ function render(data) {
 }
 
 function load() {
-  chrome.storage.local.get('trackerData', (result) => {
+  browser.storage.local.get('trackerData').then((result) => {
     render(result.trackerData || {});
   });
 }
@@ -87,11 +87,11 @@ document.querySelectorAll('.copyBtn').forEach((btn) => {
 
 document.getElementById('privacyLink').addEventListener('click', (e) => {
   e.preventDefault();
-  chrome.tabs.create({ url: chrome.runtime.getURL('privacy.html') });
+  browser.tabs.create({ url: 'https://www.dreaminginsights.com/privacy.html' });
 });
 
 document.getElementById('clearBtn').addEventListener('click', () => {
-  chrome.storage.local.remove('trackerData', () => {
+  browser.storage.local.remove('trackerData').then(() => {
     for (const key of ENDPOINTS) {
       document.getElementById(`${key}Body`).innerHTML =
         '<p class="empty">Cleared.</p>';
@@ -101,7 +101,7 @@ document.getElementById('clearBtn').addEventListener('click', () => {
 });
 
 // Refresh display whenever storage changes (e.g. a new response arrives while popup is open)
-chrome.storage.onChanged.addListener((changes) => {
+browser.storage.onChanged.addListener((changes) => {
   if (changes.trackerData) render(changes.trackerData.newValue || {});
 });
 
