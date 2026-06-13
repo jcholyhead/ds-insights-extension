@@ -8,7 +8,8 @@
       "Bash(git mv *)",
       "Bash(mkdir -p /Users/james/development/ds-extension/firefox/icons && cp /Users/james/development/ds-extension/chrome/icons/*.png /Users/james/development/ds-extension/firefox/icons/)",
       "Bash(bash pack.sh firefox)",
-      "Bash(unzip -l dreaming-insights-firefox-v1.0.zip)"
+      "Bash(unzip -l dreaming-insights-firefox-v1.0.zip)",
+      "Bash(bash /Users/james/development/ds-extension/pack.sh firefox)"
     ],
     "additionalDirectories": [
       "/Users/james/development/ds-extension/chrome/icons"
