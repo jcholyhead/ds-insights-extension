@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Dreaming Insights Extension",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Captures watchedVideo, externalTime and dayWatchedTime API responses on app.dreaming.com/spanish/progress",
   "permissions": ["storage"],
   "host_permissions": [
