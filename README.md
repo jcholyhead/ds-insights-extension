@@ -32,9 +32,6 @@ No data is sent to any external server. All storage is local to the user's brows
 ### `storage`
 Used to persist the most recent API response from each endpoint in `chrome.storage.local`. This allows data to survive popup close/reopen and be available to the dreaminginsights.com content script.
 
-### `tabs`
-Used solely to open the privacy policy page (`privacy.html`) in a new tab when the user clicks the Privacy Policy link in the popup. No tab metadata, URLs, or browsing history is accessed.
-
 ### Host permission — `https://app.dreaming.com/*`
 Required to inject a content script (`content-script.js`) into the user's progress page. This script injects a page-level interceptor (`injected.js`) that wraps the page's `fetch` and `XMLHttpRequest` APIs to observe responses from the three target endpoints. The interceptor only relays responses from the specific target URLs; all other network traffic is ignored.
 

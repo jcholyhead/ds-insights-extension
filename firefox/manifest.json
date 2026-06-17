@@ -15,7 +15,6 @@
   },
   "permissions": [
     "storage",
-    "tabs",
     "https://app.dreaming.com/*",
     "https://dreaminginsights.com/*",
     "https://www.dreaminginsights.com/*",

@@ -3,7 +3,7 @@
   "name": "Dreaming Insights Extension",
   "version": "1.0",
   "description": "Captures watchedVideo, externalTime and dayWatchedTime API responses on app.dreaming.com/spanish/progress",
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage"],
   "host_permissions": [
     "https://app.dreaming.com/*",
     "https://dreaminginsights.com/*",
